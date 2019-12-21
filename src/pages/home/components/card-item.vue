@@ -2,7 +2,10 @@
   <div class="card-item">
     <img class="cover" :src="itemData.cover" alt="">
     <div class="right">
-      <div class="title">{{itemData.title}}</div>
+      <div class="title-box">
+        <div class="title">{{itemData.title}}</div>
+        <div class="time">{{itemData.time}}</div>
+      </div>
       <div class="desc line3">{{itemData.desc}}</div>
     </div>
   </div>
@@ -22,7 +25,7 @@ export default {
 <style lang="less" scoped>
 @import '~@/assets/reset.less';
 .card-item {
-  width: 625px;
+  width: 630px;
   height: 180px;
   display: flex;
   padding: 20px;
@@ -35,6 +38,7 @@ export default {
   }
   .cover {
     width: 240px;
+    height: 140px;
     object-fit: contain;
   }
   .right {
@@ -42,12 +46,18 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .title {
-      font-size: 28px;
-      color: @c_txt;
+    .title-box {
+      .title {
+        font-size: 24px;
+        color: @c_txt;
+      }
+      .time {
+        color: @c_subtxt;
+      }
     }
+    
     .desc {
-      font-size: 24px;
+      font-size: 18px;
       color: @c_subtxt;
       word-break: break-word;
     }
