@@ -4,15 +4,6 @@
     <div class="list" v-for="(item, index) in yearList" :key="index">
       <div class="item">{{item.name}}</div>
     </div>
-
-    <!-- <el-select v-model="value" placeholder="Year">
-      <el-option
-        v-for="item in yearList"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value">
-      </el-option>
-    </el-select> -->
   </div>
 </template>
 

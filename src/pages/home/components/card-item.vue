@@ -55,7 +55,6 @@ export default {
         color: @c_subtxt;
       }
     }
-    
     .desc {
       font-size: 18px;
       color: @c_subtxt;
