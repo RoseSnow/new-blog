@@ -1,9 +1,9 @@
 <template>
   <div class="card-item">
-    <img :src="itemData.cover" alt="">
+    <img class="cover" :src="itemData.cover" alt="">
     <div class="right">
       <div class="title">{{itemData.title}}</div>
-      <div class="desc">{{itemData.desc}}</div>
+      <div class="desc line3">{{itemData.desc}}</div>
     </div>
   </div>
 </template>
@@ -22,27 +22,32 @@ export default {
 <style lang="less" scoped>
 @import '~@/assets/reset.less';
 .card-item {
+  width: 625px;
+  height: 180px;
   display: flex;
   padding: 20px;
   border: 1px solid @c_border;
   margin-bottom: 20px;
+  box-sizing: border-box;
   cursor: pointer;
   &:hover {
     background-color: @c_card;
   }
-  img {
-    width: 480px;
-    height: 260px;
-    object-fit: cover;
+  .cover {
+    width: 240px;
+    object-fit: contain;
   }
   .right {
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .title {
-      font-size: 32px;
+      font-size: 28px;
       color: @c_txt;
     }
     .desc {
-      font-size: 28px;
+      font-size: 24px;
       color: @c_subtxt;
       word-break: break-word;
     }
