@@ -2,7 +2,7 @@
   <div class="header-box">
     <div class="public header">
       <div class="left">
-        <p @click="handleBackHome">logo</p>
+        <p @click="handleBackHome">枪在手，跟我走</p>
       </div>
       <div class="right">
         <div class="nav-list" v-for="(item, index) in navList" :key="index">
@@ -65,10 +65,32 @@ export default {
       justify-content: space-between;
       align-items: center;
       .left {
+        position: relative;
         p {
-          font-size: 32px;
-          color: #fff;
+          font-size: 22px;
+          color: #8E98B5;
           cursor: pointer;
+          &:hover {
+            color: #FFF;
+          }
+
+          &::before,
+          &::after {
+            position: absolute;
+            content: '';
+            width: 75%;
+            height: 2px;
+            background-color: #8E98B5;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 10px;
+          }
+          &::before {
+            top: -8px;
+          }
+          &::after {
+            bottom: -8px;
+          }
         }
       }
       .right {

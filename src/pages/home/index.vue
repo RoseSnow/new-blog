@@ -1,10 +1,13 @@
 <template>
   <div class="public">
+    <el-button type="primary">主要按钮</el-button>
+
     <div class="article-box">
       <div class="item" v-for="(item, index) in articleList" :key="index">
         <Card :itemData="item" />
       </div>
     </div>
+
 
     <!-- backTop -->
 
@@ -93,7 +96,7 @@ export default {
 <style lang="less" scoped>
 @import '~@/assets/reset.less';
 .article-box {
-  margin-top: 50px;
+  margin-top: 50rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

@@ -1,8 +1,10 @@
 <template>
   <div class="public">
     <h2>login</h2>
-    <div class="list" v-for="(item, index) in yearList" :key="index">
-      <div class="item">{{item.name}}</div>
+    <el-button type="primary" @click="handleLogin">state</el-button>
+
+    <div class="box" v-if="loginState">
+      2020/1/1
     </div>
   </div>
 </template>
@@ -11,7 +13,8 @@
 export default {
   data() {
     return {
-      yearList: []
+      yearList: [],
+      loginState: false
     }
   },
   created() {
@@ -35,16 +38,8 @@ export default {
       this.hello(m);
     },
 
-    // 初始化年-月
-    initYearOrMonth(m, n) {
-      let initList = [];
-      for (let i = m; i>=m && i<=n; i++) {
-        initList.push({name: i})
-      }
-      initList.map((item, index) => {
-        item.id = index
-      })
-      return initList;
+    handleLogin() {
+      this.loginState = !this.loginState
     },
   }
 }

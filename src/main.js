@@ -5,11 +5,12 @@ Vue.use(Router)
 import router from './router'
 
 // element-UI
-import { Icon, Select, Backtop } from 'element-ui';
+import { Icon, Select, Backtop, Button } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Icon);
 Vue.use(Select);
 Vue.use(Backtop);
+Vue.use(Button);
 
 
 Vue.config.productionTip = false
